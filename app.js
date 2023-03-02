@@ -11,9 +11,12 @@ const projectsRoute = require('./routes/projects')
 
 var app = express();
 
-app.use(cors(
-    {origin: process.env.CLIENT_URL}
-))
+app.use(cors({
+  credentials: true,
+  origin: process.env.CLIENT_URL,
+  optionSuccessStatus:200,
+  allowedHeaders: 'Access-Control-Allow-Headers,Origin,X-Requested-With,Content-Type,Accept,Authorization'
+}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
