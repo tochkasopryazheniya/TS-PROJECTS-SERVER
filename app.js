@@ -12,7 +12,7 @@ const projectsRoute = require('./routes/projects')
 var app = express();
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: 'http://j47529828.myjino.ru',
   optionSuccessStatus:200,
   allowedHeaders: 'Access-Control-Allow-Headers,Origin,X-Requested-With,Content-Type,Accept,Authorization'
 }));
