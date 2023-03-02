@@ -12,7 +12,6 @@ const projectsRoute = require('./routes/projects')
 var app = express();
 
 app.use(cors({
-  credentials: true,
   origin: process.env.CLIENT_URL,
   optionSuccessStatus:200,
   allowedHeaders: 'Access-Control-Allow-Headers,Origin,X-Requested-With,Content-Type,Accept,Authorization'
